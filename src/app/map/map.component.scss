@@ -1,0 +1,25 @@
+mgl-map {
+  height: 100% !important;
+  width: 100% !important;
+  margin-left: -101vw;
+  position: relative;
+}
+
+.mapboxgl-marker {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.marker {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}  
+
+:host {
+  display: flex;
+  flex: 1;
+}

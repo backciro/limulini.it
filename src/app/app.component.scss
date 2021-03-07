@@ -1,0 +1,431 @@
+html, body, .page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    -webkit-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    -moz-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);  
+    color: #fff;
+    overflow: hidden; 
+}
+
+* {
+    font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+}
+section {
+    margin-top: 25px !important;
+    width: 90% !important;
+    height: 100% !important;
+}
+.page {
+    position: fixed;
+}
+
+#p1 {
+    left: 0;
+}
+
+#p2, #p3, #p4, #p5 {
+    left: 200%;
+}
+
+#p1 { background: rgb(32,32,32); }
+#p2 { background: tomato; }
+#p3 { background: darken(gold, 10%); }
+#p4 { background: deeppink; }
+#p5 { background: rebeccapurple; }
+
+#restaurant:target #p2,
+#mountains:target #p3,
+#location:target #p4,
+#contacts:target #p5 {
+    transform: translateX(-190%);
+    -webkit-transform: translateX(-190%);
+    -moz-transform: translateX(-190%);
+    -o-transform: translateX(-190%);
+    transition-delay: .4s !important;
+}
+
+#restaurant:target #p1, 
+#mountains:target #p1,
+#location:target #p1,
+#contacts:target #p1{
+    background: black;
+}
+
+#restaurant:target #p1 .icon, 
+#mountains:target #p1 .icon,
+#location:target #p1 .icon,
+#contacts:target #p1 .icon {
+    -webkit-filter: blur(3px);
+}
+
+.icon {
+    color: #fff;
+    font-size: 42px;
+    display: block;
+}
+
+ul .icon:hover {
+    opacity: 0.5;
+}
+
+.page .icon .title {
+    line-height: 2;
+}
+
+#restaurant:target ul .icon,
+#mountains:target ul .icon,
+#location:target ul .icon,
+#contacts:target ul .icon{
+    transform: scale(.6);
+    -webkit-transform: scale(.6);
+    -moz-transform: scale(.6);
+    -o-transform: scale(.6);
+    transition-delay: .25s;
+}
+
+#restaurant:target #dos,
+#mountains:target #tres,
+#location:target #cuatro,
+#contacts:target #cinco {
+    transform: scale(1.2) !important;
+    -webkit-transform: scale(1.2) !important;
+    -moz-transform: scale(1.2) !important;
+    -o-transform: scale(1.2) !important;
+}
+
+#menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-height: 100%;
+    display: inline-grid;
+    width: 10%;
+    padding: 0;
+    text-align: center;
+    background: rgba(0,0,0,.33);
+}
+
+
+
+#menu .icon {
+    margin: 30px 0;
+    transition: all .5s ease-out !important;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255,255,255,.67);
+}
+
+.title, .hint {
+    display: block;
+}
+
+.title {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.limulini {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.hint {
+    font-size: 13px;
+}
+
+#p4 .hint {
+    display: inherit !important;
+}
+
+.hint a {
+    color: #FFF;
+    transition: all 250ms ease-out;
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+}
+
+.hint a:hover {
+    filter: invert(25%);
+}
+
+.line-trough {
+    text-decoration: line-through;
+}
+
+.page .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10%;
+    left: 0;
+    width: 270px;
+    height: 170px;
+    margin: auto;
+    text-align: center;
+    font-size: 80px;
+    line-height: 1.3;
+    transform: translateX(360%);
+    -webkit-transform: translateX(360%);
+    -moz-transform: translateX(360%);
+    -o-transform: translateX(360%);
+    transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+    -webkit-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+    -moz-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+    -o-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+}
+
+.page#p1 .icon {
+    height: 220px;
+}
+
+.page#p1 .icon {
+    transform: translateX(10%) !important;
+}
+
+#restaurant:target .page#p2 .icon,
+#mountains:target .page#p3 .icon,
+#location:target .page#p4 .icon,
+#contacts:target .page#p5 .icon {
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    -moz-transform: translateX(0) !important;
+    -o-transform: translateX(0) !important;
+    transition-delay: 1s;
+}
+
+.footer {
+    $padding-value: 4px;
+    $height-value: 40px;
+    $width-value: 90%;
+    
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    
+    display: block;
+    text-align: center;
+    font-family: styled;
+    font-size: 12px;
+    height: calc($height-value/2);
+    padding: 4px 0;
+    width: $width-value;
+    animation: color_change_rev .2s;
+    color: darken($color: whitesmoke, $amount: 15%);
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    transition: background .2s ease;
+    -webkit-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    -ms-transition: background .2s ease;
+    -o-transition: background .2s ease;
+}
+
+.socials {
+    margin-top: 23px;
+    
+    i {
+        transition: filter .2s ease;
+        -webkit-transition: filter .2s ease;
+        -moz-transition: filter .2s ease;
+        -ms-transition: filter .2s ease;
+        -o-transition: filter .2s ease;
+        
+        margin: 0 15px;
+    }
+    
+    i:hover {
+        filter: invert(25%);
+        cursor: pointer;
+    }
+}
+
+mgl-map {
+    height: 100% !important;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.mapboxgl-marker {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+
+.marker {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    
+    background-image: url('https://loremflickr.com/60/60');
+    width: 60px;
+    height: 60px;
+}  
+
+:host {
+    display: flex;
+    flex: 1;
+}
+
+.mapboxgl-popup-content {
+    color: black;
+    font-size: 14px;
+}
+
+.btnRoad {
+    margin: 10px auto !important;
+    display: flow-root !important;
+    
+    a {
+        color: white;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    #menu {
+        position: fixed;
+        z-index: 1;
+        max-height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        display: inline-grid;
+        width: 20%;
+        padding: 0;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.33);
+    }
+    
+    
+    .footer {
+        $padding-value: 4px;
+        $height-value: 40px;
+        $width-value: 80%;
+        
+        position: fixed;
+        bottom: 0;
+        left: 20%;
+        width: $width-value;
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        transition: background .2s ease;
+        -webkit-transition: background .2s ease;
+        -moz-transition: background .2s ease;
+        -ms-transition: background .2s ease;
+        -o-transition: background .2s ease;
+    }
+    
+    #restaurant:target #p2,
+    #mountains:target #p3,
+    #location:target #p4,
+    #contacts:target #p5 {
+        transform: translateX(-180%);
+        -webkit-transform: translateX(-180%);
+        -moz-transform: translateX(-180%);
+        -o-transform: translateX(-180%);
+        transition-delay: .4s !important;
+    }
+    section {
+        margin-top: 25px !important;
+        width: 80% !important;
+        height: 100% !important;
+    }
+    
+    #p1{
+        padding-left: 20%;
+    }
+    
+    .page .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: unset;
+        left: 0;
+        width: 270px;
+        height: 170px;
+        margin: auto;
+        text-align: center;
+        font-size: 80px;
+        line-height: 1.3;
+        transform: translateX(360%);
+        -webkit-transform: translateX(360%);
+        -moz-transform: translateX(360%);
+        -o-transform: translateX(360%);
+        transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+        -webkit-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+        -moz-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+        -o-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+    }
+    
+}
+
+
+@keyframes cf4FadeInOut {
+    0% {
+        opacity:.33;
+    }
+    33% {
+        opacity:.33;
+    }
+    34% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+#cf4 {
+    position:relative;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    margin:0 auto;
+}
+#cf4 img {
+    opacity:0;
+    position:absolute;
+    left:0;
+    
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+}
+
+#cf4 img {    
+    animation-name: cf4FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+}
+
+#cf4 img:nth-of-type(1) {
+    animation-delay: 12s;
+}
+#cf4 img:nth-of-type(2) {
+    animation-delay: 6s;
+}
+#cf4 img:nth-of-type(3) {
+    animation-delay: 0s;
+}

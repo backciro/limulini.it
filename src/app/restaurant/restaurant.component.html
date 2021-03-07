@@ -1,0 +1,6 @@
+<ul class="menu">
+    <li class="dish" *ngFor="let dish of dishes">
+        <img [src]="dish.imageUrl" alt="">
+        <p>{{dish.caption}} <br/> <span class="author">{{dish.author}}</span></p>
+    </li>
+</ul>

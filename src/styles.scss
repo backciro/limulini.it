@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~mapbox-gl/dist/mapbox-gl.css";
+
+
+@font-face {
+    font-family: 'alarm-clock';
+    src: url('assets/fonts/alarm.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'styled';
+    src: url('assets/fonts/emono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'crook';
+    src: url('assets/fonts/quantico.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: cinema;
+    src: url('assets/fonts/Cinema.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: business;
+    src: url('assets/fonts/business.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: beats;
+    src: url('assets/fonts/beats.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: bigdis;
+    src: url('assets/fonts/bigdis.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

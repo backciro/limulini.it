@@ -1,21 +1,81 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="ct" id="home">
+  <div class="ct" id="restaurant">
+    <div class="ct" id="mountains">
+      <div class="ct" id="location">
+        <div class="ct" id="contacts">
+          <ul id="menu">
+            <a href="#home" routerLinkActive="router-link-active"  href="#home"><li class="icon fa fa-wind" id="uno"></li></a>
+            <a href="#restaurant"><li class="icon fa fa-utensils" id="dos"></li></a>
+            <a href="#mountains"><li class="icon fa fa-mountain" id="tres"></li></a>
+            <a href="#location"><li class="icon fa fa-map-marked-alt" id="cuatro"></li></a>
+            <a href="#contacts"><li class="icon fa fa-phone" id="cinco"></li></a>
+          </ul>
+          <div class="page" id="p1">
+            <div id="cf4" class="shadow">
+              <img src="../assets/bg/first.jpg" />
+              <img src="../assets/bg/second.jpg" />
+              <img src="../assets/bg/third.jpg" />
+            </div>
+            <section class="icon fa fa-wind">
+              <span class="title">Ristorante di Montagna <br> & <br> Griglieria <br> <span class="limulini">Li Mulini</span></span>
+              <app-windmill class="slow-wind"></app-windmill>
+            </section>  
+          </div>
+          <div class="page" id="p2">
+            <section class="icon fa fa-utensils">
+              <span class="title">Ristorante</span>
+              <app-restaurant></app-restaurant>
+            </section>
+          </div>  
+          <div class="page" id="p3">
+            <section class="icon fa fa-mountain">
+              <span class="title">Escursioni</span>
+              <app-trips></app-trips>            
+            </section>
+          </div>
+          <div class="page" id="p4">
+            <section class="icon fa fa-map-marked-alt">
+              <span class="title">Dove Siamo</span>
+              <p class="hint">
+                Loc. Li Mulini - Tempio Pausania 07029 (OT) <br>
+              </p>
+              <button mat-raised-button class="btnRoad" color="primary"><a href="https://goo.gl/maps/qvbQijrCZUVFUPg67" target="_blank">Click Qui per Indicazioni Stradali</a></button> 
+              <mgl-map [style]="'mapbox://styles/mapbox/satellite-v9'" [zoom]="[15]" [center]="[9.144259, 40.880415]" [cursorStyle]="cursorStyle">
+                <mgl-geojson-source id="points" [data]="points"></mgl-geojson-source>
+                <mgl-layer id="points" source="points" type="symbol" [layout]="{ 'icon-image': '{icon}-15', 'icon-allow-overlap': true}" (click)="onClick($event)" (mouseEnter)="cursorStyle = 'pointer'" (mouseLeave)="cursorStyle = ''"></mgl-layer>
+                <mgl-popup *ngIf="selectedPoint" [feature]="selectedPoint">
+                  <span [innerHTML]="selectedPoint.properties?.description"></span>
+                </mgl-popup>
+              </mgl-map>
+            </section>
+          </div> 
+          <div class="page" id="p5">
+            <section class="icon fa fa-phone">
+              <span class="title">Contatti</span>
+              <div class="socials">
+                <a href="https://www.instagram.com/ristorantedimontagna.limulini/?hl=it" target="_blank"><i class="fab fa-instagram"></i></a>&nbsp;
+                <a href="https://www.facebook.com/Griglieria-Ristorante-Di-Montagna-Li-Mulini-207352519878261/" target="_blank"><i class="fab fa-facebook-f"></i></a>&nbsp;
+                <a href="https://www.tripadvisor.it/Restaurants-g776125-Tempio_Pausania_Province_of_Olbia_Tempio_Sardinia.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>&nbsp;
+                
+              </div>
+              <p class="hint">
+                <br /><br />
+                <span>Per info e prenotazioni contattaci ai seguenti numeri: </span><br/>
+                <br /><br /><br />
+                <a>+39 377 137 5309</a><br /><br />
+                <a>+39 327 543 6080</a>
+              </p>
+            </section>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="footer">
+  <span id="footer">
+    2019 &copy; M.I.V.A SRL <span id="piva"> 01850050905</span> - tutti i diritti riservati &nbsp;&nbsp;
+  </span>
+</div>
 
-<router-outlet></router-outlet>
+
